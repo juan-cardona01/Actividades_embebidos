@@ -1,0 +1,107 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Temperatura",
+						"value": [
+							"datasources[\"AWANTA\"][\"Temperatura\"]"
+						],
+						"include_legend": true,
+						"legend": "Histórico temperatura"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Humedad",
+						"value": "datasources[\"AWANTA\"][\"Humedad\"]",
+						"units": "%RH",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Temperatura",
+						"value": "datasources[\"AWANTA\"][\"Temperatura\"]",
+						"units": "°C",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 8
+			},
+			"col": {
+				"3": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Humedad",
+						"value": [
+							"datasources[\"AWANTA\"][\"Humedad\"]"
+						],
+						"include_legend": true,
+						"legend": "Histórico humedad"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "AWANTA",
+			"type": "dweet_io",
+			"settings": {
+				"thing_id": "uceva07"
+			}
+		}
+	],
+	"columns": 3
+}
